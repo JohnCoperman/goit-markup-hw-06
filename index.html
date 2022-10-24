@@ -399,7 +399,7 @@
           </address>
         </div>
         <div class="socials">
-          <h3>Приєднуйтесь</h3>
+          <h3 class="footer-title">Приєднуйтесь</h3>
           <ul class="list socials-list">
             <li>
               <a href="" class="link socials-link">
@@ -431,13 +431,33 @@
             </li>
           </ul>
         </div>
+
+        <form class="subscribe-form" name="subscribe" autocomplete="on" novalidate>
+          <h3 class="footer-title" id="">Підпишіться на розсилку</h3>
+          <div class="form-group" role="group" aria-labelledby="subscribe-to-us">
+            <label for="user-email" hidden>E-Mail</label>
+            <input
+              class="email-text"
+              id="user-email"
+              type="email"
+              name="usermail"
+              placeholder="E-Mail"
+            />
+            <button class="btn form-btn" type="submit">
+              <span>Підписатися</span>
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon_send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
           <svg
-            viewBox="0 0 18 18"
+            viewBox="0 0 18 16"
             xmlns="http://www.w3.org/2000/svg"
             style="width: 18px; height: 18px"
           >
@@ -446,6 +466,58 @@
             />
           </svg>
         </button>
+        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <form class="modal-form" name="form-data" autocomplete="on" novalidate>
+          <div class="form-wrapper">
+            <label for="username">Ім'я</label>
+            <input class="data" name="user-name" type="text" id="username" required />
+            <svg class="form-svg" style="width: 18px; height: 18px">
+              <use href="./images/icons.svg#icon_email-black"></use>
+            </svg>
+          </div>
+          <div class="form-wrapper">
+            <label>
+              Телефон
+              <input class="data" name="user-tel" type="tel" required />
+            </label>
+            <svg class="form-svg" style="width: 18px; height: 18px">
+              <use href="./images/icons.svg#icon_phone-black"></use>
+            </svg>
+          </div>
+          <div class="form-wrapper">
+            <label>
+              Пошта
+              <input class="data" name="user-email" type="text" required />
+            </label>
+            <svg class="form-svg" style="width: 18px; height: 18px">
+              <use href="./images/icons.svg#icon_person-black"></use>
+            </svg>
+          </div>
+          <div class="form-wrapper">
+            <label>
+              Коментар
+              <textarea class="data comment" name="comment" placeholder="Введіть текст"></textarea>
+            </label>
+          </div>
+          <!-- <div class="form-sumbit"> -->
+          <div class="policies-wrapper">
+            <label class="i-agree"
+              ><input type="checkbox" name="policies" />
+              <span class="i-agree-text"
+                >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span
+              >
+            </label>
+            <svg style="width: 18px; height: 18px">
+              <use href="./images/icons.svg#icon_checkframe"></use>
+            </svg>
+          </div>
+          <!-- <div class="button-wrapper"> -->
+          <button class="btn form-btn" type="sumbit">
+            <span>Відправити</span>
+          </button>
+          <!-- </div> -->
+          <!-- </div> -->
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
