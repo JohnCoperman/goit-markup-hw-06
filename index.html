@@ -435,15 +435,15 @@
         <form class="subscribe-form" name="subscribe" autocomplete="on" novalidate>
           <h3 class="footer-title" id="">Підпишіться на розсилку</h3>
           <div class="form-group" role="group" aria-labelledby="subscribe-to-us">
-            <label for="user-email" hidden>E-Mail</label>
+            <label for="email-user" hidden>E-Mail</label>
             <input
               class="email-text"
-              id="user-email"
+              id="email-user"
               type="email"
               name="usermail"
               placeholder="E-Mail"
             />
-            <button class="btn form-btn" type="submit">
+            <button class="btn form-btn" type="submit" name="eneble-subscribe">
               <span>Підписатися</span>
               <svg width="24" height="24">
                 <use href="./images/icons.svg#icon_send"></use>
@@ -468,55 +468,54 @@
         </button>
         <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
         <form class="modal-form" name="form-data" autocomplete="on" novalidate>
-          <div class="form-wrapper">
-            <label for="username">Ім'я</label>
-            <input class="data" name="user-name" type="text" id="username" required />
-            <svg class="form-svg" style="width: 18px; height: 18px">
+          <div class="form-wrap">
+            <label for="user-name">Ім'я</label>
+            <input class="form-inputs" name="user-name" type="text" required />
+            <svg class="input-svg" width="18" height="18">
               <use href="./images/icons.svg#icon_email-black"></use>
             </svg>
           </div>
-          <div class="form-wrapper">
-            <label>
-              Телефон
-              <input class="data" name="user-tel" type="tel" required />
-            </label>
-            <svg class="form-svg" style="width: 18px; height: 18px">
+          <div class="form-wrap">
+            <label for="user-tel">Телефон</label>
+            <input class="form-inputs" name="user-tel" type="tel" id="user-tel" required />
+            <svg class="input-svg" width="18" height="18">
               <use href="./images/icons.svg#icon_phone-black"></use>
             </svg>
           </div>
-          <div class="form-wrapper">
-            <label>
-              Пошта
-              <input class="data" name="user-email" type="text" required />
-            </label>
-            <svg class="form-svg" style="width: 18px; height: 18px">
+          <div class="form-wrap">
+            <label for="user-email">Пошта</label>
+            <input class="form-inputs" name="user-email" type="text" id="user-email" required />
+            <svg class="input-svg" width="18" height="18">
               <use href="./images/icons.svg#icon_person-black"></use>
             </svg>
           </div>
-          <div class="form-wrapper">
+          <div class="form-wrap">
             <label>
               Коментар
-              <textarea class="data comment" name="comment" placeholder="Введіть текст"></textarea>
+              <textarea
+                class="form-inputs comment"
+                name="comment"
+                placeholder="Введіть текст"
+              ></textarea>
             </label>
           </div>
           <!-- <div class="form-sumbit"> -->
-          <div class="policies-wrapper">
-            <label class="i-agree"
-              ><input type="checkbox" name="policies" />
-              <span class="i-agree-text"
-                >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span
-              >
+          <div class="policies-wrap">
+            <label class="i-agree">
+              <input class="policies visualy-hidden" type="checkbox" name="policies" required />
+              <span class="check-wrap">
+                <svg class="check-icon" width="16" height="15">
+                  <use href="./images/icons.svg#icon_ok"></use>
+                </svg>
+              </span>
+              <span class="i-agree-text">
+                Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+              </span>
             </label>
-            <svg style="width: 18px; height: 18px">
-              <use href="./images/icons.svg#icon_checkframe"></use>
-            </svg>
           </div>
-          <!-- <div class="button-wrapper"> -->
-          <button class="btn form-btn" type="sumbit">
+          <button class="btn form-btn" type="sumbit" name="data-sumbit">
             <span>Відправити</span>
           </button>
-          <!-- </div> -->
-          <!-- </div> -->
         </form>
       </div>
     </div>

@@ -307,23 +307,31 @@ img {
       width: 570px;
       margin-left: 93px;
 }
+
 .form-group {
       display: flex;
       justify-content: center;
       column-gap: 12px;
 }
+
 .email-text {
       width: 358px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 4px;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));background-color: transparent;
-
-      
       padding: 15px 16px;
-
-      color: white;
+      color: var(--color-white);
+      
       line-height: 1.25;
+
+      outline:transparent;
+      transition: border var(--duration) var(--time-style);
 }
+
+.email-text:focus {
+      border: 1px solid var(--zeema-blue);
+}
+
 .email-text::placeholder {
       color: rgba(255, 255, 255, 0.6);
       font-size: var(--medium-text);
@@ -413,7 +421,7 @@ img {
       position: absolute;
       top: 8px;
       right: 8px;
-      transition: visibility 100ms linear 150ms;
+      transition: visibility 100ms linear 150ms, color var(--duration) var(--time-style), box-shadow var(--duration) var(--time-style);
 }
 
 .modal-close:hover, .modal-close:focus {
@@ -440,24 +448,12 @@ img {
       justify-content: center;
 }
 
-.form-wrapper {
+.form-wrap {
       width: 100%;
       margin-top: 10px;
       position: relative;
       color: var(--color-onix);
 }
-
-/* .modal-form .form-wrapper:last-child {
-      margin-bottom: 20px;
-} */
-.form-svg {
-      position: absolute;
-      top: 30px;
-      left: 12px;
-      bottom: 11px;
-      fill:currentColor;
-}
-
 
 .modal-form label {
       width:100%;
@@ -467,18 +463,32 @@ img {
       color:var(--color-gray);
 }
 
-.data {
+.form-inputs {
       width:100%;
       height: 40px;
       margin-top: 4px;
       border: 1px solid rgba(33, 33, 33, 0.3);
       border-radius: 4px;
       padding-left: 42px;
-      
+      outline:transparent;
+      transition: border var(--duration) var(--time-style);
 }
 
-.data:focus-within .form-svg{
-      color: var(--zeema-blue);
+.form-inputs:focus {
+      border: 1px solid var(--zeema-blue);
+}
+
+.input-svg {
+      position: absolute;
+      top: 65.5%;
+      left: 12px;
+      transform: translateY(-50%);
+      fill:currentColor;
+      transition: fill var(--duration) var(--time-style);
+}
+
+.form-inputs:focus + .input-svg {
+      fill: var(--zeema-blue);
 }
 
 .comment {
@@ -487,55 +497,62 @@ img {
       height: 120px;
       padding: 12px 16px;
 }
+
 .comment::placeholder {
       color: rgba(117, 117, 117, 0.5);
 }
 
+.policies-wrap {
+      width: 100%;
+      margin-top:20px;
+      text-align: center;
+}
+
 .i-agree {
       width: 100%;
-      display:inline-block;
-      margin-top:20px;
-      
+      position: relative;
 }
 
-.i-agree input {
-      padding: 0;
-      margin: 0;
-      width: 0;
-      height: 0;
+.check-wrap {
+      position: absolute;
+      width: 16px;
+      height: 15px;
+      top: 50%;
+      left:0;
+      transform: translateY(-50%);
+      fill: transparent;
+      border: 2px solid var(--color-onix);
+      border-radius:2px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: transparent;
+      transition: fill var(--duration) var(--time-style), border var(--duration) var(--time-style), background-color var(--duration) var(--time-style);
+
 }
 
-.policies-wrapper {
-      
+.policies:checked + .check-wrap {
+      background-color: var(--zeema-blue);
+      fill: var(--color-white);
+      border-color:transparent;
 }
 
 .i-agree-text {
       font-size: var(--small-text);
       line-height: 1.71;
       color: var(--color-gray);
+      padding-left: 7px;
 }
 
 .i-agree-text a {
       color: var(--zeema-blue);
 }
-/* .form-sumbit {
-      width: 100%;
-      padding: 20px 100% 40px;
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
-} */
 
 .modal-form button {
       margin-top: 30px;
 }
-
-/* .button-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-} */
 
 /* ----------------------------HOME---------------------------*/
 

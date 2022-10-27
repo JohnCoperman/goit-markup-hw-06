@@ -266,7 +266,7 @@
           </address>
         </div>
         <div class="socials">
-          <h3>Приєднуйтесь</h3>
+          <h3 class="footer-title">Приєднуйтесь</h3>
           <ul class="list socials-list">
             <li>
               <a href="" class="link socials-link">
@@ -298,6 +298,26 @@
             </li>
           </ul>
         </div>
+
+        <form class="subscribe-form" name="subscribe" autocomplete="on" novalidate>
+          <h3 class="footer-title" id="">Підпишіться на розсилку</h3>
+          <div class="form-group" role="group" aria-labelledby="subscribe-to-us">
+            <label for="email-user" hidden>E-Mail</label>
+            <input
+              class="email-text"
+              id="email-user"
+              type="email"
+              name="usermail"
+              placeholder="E-Mail"
+            />
+            <button class="btn form-btn" type="submit" name="eneble-subscribe">
+              <span>Підписатися</span>
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon_send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
   </body>
