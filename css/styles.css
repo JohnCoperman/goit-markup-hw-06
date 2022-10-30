@@ -228,6 +228,7 @@ img {
 .footer-container {
       display: flex;
       align-items: baseline;
+      justify-content: space-between;
 }
 
 .adress {
@@ -251,7 +252,7 @@ img {
       margin-bottom: 9px;
 } */
 .socials {
-      margin-left: 70px;
+      
 }
 
 .socials-list {
@@ -305,7 +306,6 @@ img {
 
 .subscribe-form {
       width: 570px;
-      margin-left: 93px;
 }
 
 .form-group {
@@ -384,8 +384,8 @@ img {
 
 .modal {
       width: 528px;
-      height: 588px;
-      padding: 40px;
+      height: 581px;
+      /* padding: 40px; */
       
       background-color: #FFFFFF;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -441,9 +441,11 @@ img {
       font-size: 20px;
       line-height: 1.15;
       text-align: center;
+      font-weight: 700;
 }
 
 .modal-form {
+      padding: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -472,12 +474,13 @@ img {
 .form-inputs {
       width:100%;
       height: 40px;
-      margin-top: 4px;
+      margin-top: 2px;
       border: 1px solid rgba(33, 33, 33, 0.3);
       border-radius: 4px;
       padding-left: 42px;
       outline:transparent;
       transition: border var(--duration) var(--time-style);
+
 }
 
 .form-inputs:focus {
